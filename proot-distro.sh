@@ -318,8 +318,8 @@ command_install() {
 		export DEX2OATBOOTCLASSPATH=${DEX2OATBOOTCLASSPATH-}
 		export EXTERNAL_STORAGE=${EXTERNAL_STORAGE-}
 		export LANG=C.UTF-8
-		export PATH=\${PATH}:/data/data/com.termux/files/usr/bin:/system/bin:/system/xbin
-		export PREFIX=${PREFIX-/data/data/com.termux/files/usr}
+		export PATH=\${PATH}:/data/data/com.lifehost/files/usr/bin:/system/bin:/system/xbin
+		export PREFIX=${PREFIX-/data/data/com.lifehost/files/usr}
 		export TERM=${TERM-xterm-256color}
 		export TMPDIR=/tmp
 		EOF
@@ -776,7 +776,7 @@ command_login() {
 				set -- "--bind=/apex" "$@"
 			fi
 			set -- "--bind=/data/dalvik-cache" "$@"
-			set -- "--bind=/data/data/com.termux" "$@"
+			set -- "--bind=/data/data/com.lifehost" "$@"
 			set -- "--bind=/storage" "$@"
 			set -- "--bind=/storage/self/primary:/sdcard" "$@"
 			set -- "--bind=/system" "$@"
@@ -871,7 +871,7 @@ command_login_help() {
 	echo
 	echo -e "  ${CYAN}* ${YELLOW}/apex ${CYAN}(only Android 10+)${RST}"
 	echo -e "  ${CYAN}* ${YELLOW}/data/dalvik-cache${RST}"
-	echo -e "  ${CYAN}* ${YELLOW}/data/data/com.termux${RST}"
+	echo -e "  ${CYAN}* ${YELLOW}/data/data/com.lifehost${RST}"
 	echo -e "  ${CYAN}* ${YELLOW}/sdcard${RST}"
 	echo -e "  ${CYAN}* ${YELLOW}/storage${RST}"
 	echo -e "  ${CYAN}* ${YELLOW}/system${RST}"
